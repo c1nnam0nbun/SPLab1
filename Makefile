@@ -1,6 +1,6 @@
 ﻿CC = g++
 CFLAGS = -c -Wall
-all: lab1
+all: clear lab1
 
 lab1: main.o taxi.o
 	$(CC) main.o taxi.o -o lab1
@@ -11,4 +11,5 @@ main.o: main.cpp
 taxi.o: taxi.cpp
 	$(CC) $(CFLAGS) taxi.cpp
 
-clean: rm -rf *.o lab1
+clean: 
+	rm -rf *.o lab1
